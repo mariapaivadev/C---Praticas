@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+class Carro {
+  public:
+    string marca;
+    int ano;
+    int velocidade = 0;
+
+    void acelerar() {
+      velocidade += 10;
+    }
+
+    void frear() {
+      velocidade -= 10;
+      if (velocidade < 0){ 
+        velocidade = 0;
+    }
+    }
+
+    void mostrarVelocidade() {
+      cout << "Velocidade atual:" << velocidade << "km/h" << endl;
+    }
+};
+
+int main() {
+  Carro meuCarro;
+
+meuCarro.marca = "Fiat";
+meuCarro.ano = 2020;
+
+meuCarro.acelerar();
+meuCarro.mostrarVelocidade();
+
+meuCarro.frear();
+meuCarro.mostrarVelocidade();
+  return 0;
+}

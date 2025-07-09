@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+class Aluno{
+    public:
+    string nome;
+    float nota1, nota2;
+
+    float media(){
+    return (nota1 + nota2 ) /2;
+     } 
+     
+     string aprovado(){
+     if( media() >= 6){
+     return "Aprovado!";
+    }else{
+     return "Reprovado!";
+    }
+ }
+-
+};
+ int main(){
+    Aluno a;
+    a.nome = "Maria";
+    a.nota1 = 7.5;
+    a.nota2 = 8.0;
+    
+    cout<<"Aluno:"<< a.nome<<endl;
+    cout<<"Media:"<< a.media()<<endl;
+    cout<<"Situacao:"<< a.aprovado()<<endl;
+    
+    return 0;
+ }

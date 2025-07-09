@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+class Semafaro(){ 
+    public:
+    string cor = vermelho;
+   
+    void mudarCor(string novaCor){
+        if(novaCor == "vermelho" || novaCor == "amarelo" || novaCor == "verde"){
+        cor = novaCor;
+    } else{ 
+        cout << "cor invalida!" <<endl;
+    }
+
+}
+    void mostrarStatus(){
+        if(cor == "vermelho"){
+            cout <<"Pare"<< endl;
+        }else if (cor == "amarelo"){
+        cout<< "Atençao"<< endl;
+        }else if (cor == "verde"){
+            cout << "siga"<< endl;
+        }else{
+            cout << "cor invalida" << endl;
+        }
+        };
+    }
+    int main(){
+        Semaforo s;
+        
+        s.mostrarStatus();
+        s.mudarCor("verde");
+        s.mostrarStatus();
+
+        s.mudarCor("azul");
+        s.mostrarStatus();
+        return 0;
+    }
+        

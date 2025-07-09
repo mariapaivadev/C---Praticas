@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+class Pessoa{
+    public:
+    string nome;
+    int idade;
+
+    void apresentar(){
+    cout<<"Nome:"<< nome <<endl;
+    cout<<"Idade:"<< idade<<endl;
+    }
+};
+    class Aluno : public Pessoa {
+    public:
+    string curso;
+    int matricula;
+
+    void apresentarAluno(){
+        apresentar();
+      cout<<"Curso:"<< curso<<endl;
+     cout<<"Matricula:"<< matricula<<endl;
+     }
+    };
+
+int main (){
+    Aluno a;
+
+    a.nome = "Maria";
+    a.idade = 19;
+    a.curso ="Sistemas de Informaçao";
+    a.matricula = 901003223;
+
+    a.apresentarAluno();
+    return 0;
+}
